@@ -23,11 +23,11 @@
 
   .page.theme_light {
   inline-size: 375px;
-  background-image: var(--background-image);
+  /* background-image: var(--background-image); */
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
-  background-color: var(--main-color-dark-theme);
+  /* background-color: var(--background-color); */
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--color-content-text);
   margin: 0 auto;
@@ -51,8 +51,8 @@
 .decorated-zone::before {
   content: "";
   position: absolute;
-  top: 1.2%;
-  right: 3%;
+  top: 10px;
+  right: 10px;
   width: 1.5rem;
   height: 1.5rem;
   background-color: transparent;
@@ -68,8 +68,8 @@
   background-color: transparent;
   border-bottom: 0.0625rem solid var(--decor-header);
   border-left: 0.0625rem solid var(--decor-header);
-  left: 3%;
-  bottom: 1.2%;
+  left: 10px;
+  bottom: 10px;
 }
 
 /* Псевдоэлементы REC и точка */
@@ -114,15 +114,15 @@
   align-items: flex-end;
   font-size: 1.125rem;
   font-style: normal;
-  padding-top:32px;
+  padding-top: 63px;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 1.5vh;
+  gap: 9px;
   margin-top: 2.6vw;
-  margin-right: 0.6vw;
+  margin-right: 10px;
   margin-bottom: 2.9vw;
 }
 
@@ -143,7 +143,7 @@
   padding-bottom: 2px;
 }
 
-.header__theme-menu-button_active { 
+.header__theme-menu-button_active {
   border: 1px solid var(--decor-button-header);
   pointer-events: none;
 }
@@ -171,9 +171,8 @@
   line-height: 6rem;
   color: var(--color-header-title);
   text-shadow: 4px 4px 0 var(--title-shadow);
-  padding-left: 0.6vw;
-  letter-spacing: -0.18rem;
-  margin-top: 1.5vw;
+  padding-left: 10px;
+  margin-top: 55px;
 }
 
 /* Мысль в header */
@@ -185,13 +184,14 @@
   font-size: 1.125rem;
   font-weight: bold;
   height: min-content;
-  margin-right: 0.8vw;
-  margin-left: 0.8vw;
-  margin-top: 3.7vw;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-top: 54px;
 }
 
 /* Медиазапросы_768px для heder*/
 @media screen and (min-width: 768px) {
+
   .page.theme_light { 
     inline-size: 768px;
  }
@@ -240,10 +240,12 @@
 
 /* Медиазапросы_1024px для heder*/
 @media screen and (min-width: 1024px) {
-  .page.theme_light { 
-    inline-size: 1024px;
- }
- .header {
+  
+.page.theme_light { 
+  inline-size: 1024px;
+}
+
+.header {
   min-height: 768px;
 } 
 
@@ -278,9 +280,9 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 53px;
-  margin-left: 0.8vw;
-  margin-right: 0.8vw;
+  gap: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-top: 40px;
   margin-bottom: 50px;
   font-size: 1.125rem;
@@ -308,14 +310,14 @@
 }
 
 .content__article-text {
-  font-weight: normal;
+  line-height: 1.455rem;
 }
 
 .content__article-text_part {
   color: var(--main-color-dark-theme);
   background-color: var(--accent-color-dark-theme);
-  margin-top: 1.5vw;
-  margin-bottom: 0.6vw;
+  margin-top: 20px;
+  margin-bottom: 11px;
 }
 
 .text__shadow {
@@ -393,15 +395,15 @@
 
 /* Галерея */
 .gallery {
-  margin-left: 0.8vw;
-  margin-right: 0.8vw;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 36px;
   font-size: 1.125rem;
 }
 
 .gallery__list {
   display: grid;
-  gap: 10px;
+  gap: 5px;
 }
 
 .gallery__picture-image {
@@ -435,7 +437,7 @@
     grid-column: 1 / 3;
   }
 
-  .gallery__picture-ice-cream { 
+  .gallery__picture-ice-cream {
     grid-row: 1 / 3;
     grid-column: 3;
   }
@@ -483,9 +485,8 @@
   line-height: 6rem;
   color: var(--color-header-title);
   text-shadow: 0 4px 2px #FF0070;
-  padding-left: 1vw;
+  padding-left: 20px;
   letter-spacing: -0.18rem;
-  padding-bottom: 5.2vw;
 }
 
 /* Медиазапросы_768px для галлереи*/
@@ -504,6 +505,7 @@
 
 /* Медиазапросы_1024px для подвала*/
 @media screen and (min-width: 1024px) {
+
   .footer {
     min-height: 768px;
   }
