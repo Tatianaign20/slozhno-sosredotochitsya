@@ -3,11 +3,11 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   inline-size: 375px;
-  /* background-image: var(--background-image); */
+  background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
-  /* background-color: var(--background-color); */
+  background-color: var(--background-color);
   font-family: 'IBM Plex mono', sans-serif;
   color: var(--color-content-text);
   margin: 0 auto;
@@ -172,7 +172,7 @@
 /* Медиазапросы_768px для heder*/
 @media screen and (min-width: 768px) {
 
-  .page { 
+  .page {
     inline-size: 768px;
  }
 
@@ -221,7 +221,7 @@
 /* Медиазапросы_1024px для heder*/
 @media screen and (min-width: 1024px) {
   
-.page { 
+.page {
   inline-size: 1024px;
 }
 
@@ -443,7 +443,7 @@
 @media screen and (min-width: 1024px) {
   .gallery__list {
     grid-template-columns: repeat(2, 1fr) 315px ;
-  } 
+  }
 }
 
 /* Подвал */

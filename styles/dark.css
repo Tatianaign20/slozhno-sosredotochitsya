@@ -189,7 +189,7 @@
 /* Медиазапросы_768px для heder*/
 @media screen and (min-width: 768px) {
 
-  .page.theme_dark { 
+  .page.theme_dark {
     inline-size: 768px;
  }
 
@@ -238,7 +238,7 @@
 /* Медиазапросы_1024px для heder*/
 @media screen and (min-width: 1024px) {
   
-.page.theme_dark { 
+.page.theme_dark {
   inline-size: 1024px;
 }
 
@@ -460,7 +460,7 @@
 @media screen and (min-width: 1024px) {
   .gallery__list {
     grid-template-columns: repeat(2, 1fr) 315px ;
-  } 
+  }
 }
 
 /* Подвал */
