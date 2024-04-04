@@ -333,20 +333,17 @@
 @media screen and (min-width: 768px) {
 
 .content {
-  gap: 60px;
+  gap: 58px;
+  margin-top: 60px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 60px;
 }
 
 .content__section_2column {
   display: grid;
   grid-template-columns: min(35%, 236px) 1fr;
   gap: 20px;
-}
-
-.content {
-  margin-top: 60px;
-  margin-right: 20px;
-  margin-left: 20px;
-  margin-bottom: 60px;
 }
 
 .content__article-header {
@@ -460,7 +457,7 @@
 @media screen and (min-width: 1024px) {
   .gallery__list {
     grid-template-columns: repeat(2, 1fr) 315px ;
-} 
+  } 
 }
 
 /* Подвал */
