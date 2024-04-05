@@ -304,6 +304,7 @@
 .content__article-text_part {
   color: var(--main-color-dark-theme);
   background-color: var(--accent-color-dark-theme);
+  font-weight: normal;
   margin-top: 20px;
   margin-bottom: 11px;
 }
@@ -320,7 +321,7 @@
 
 .text__shadow:focus-visible {
   outline: -webkit-focus-ring-color none;
-  outline: 1px solid var(--decor-href);
+  border: 1px solid var(--decor-href);
 }
 
 /* Медиазапросы_768px для основного контента*/
