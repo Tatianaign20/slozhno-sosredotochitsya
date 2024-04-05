@@ -2,7 +2,6 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  /* inline-size: 375px; */
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center top;
@@ -180,11 +179,11 @@
 /* Медиазапросы_768px для heder*/
 @media screen and (min-width: 768px) {
 
-  .page-size {
+.page-size {
     inline-size: 768px;
  }
 
- .header {
+.header {
   min-height: 1024px;
 } 
 
@@ -272,7 +271,6 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 40px;
-  margin-bottom: 40px;
   font-size: 1.125rem;
 }
 
@@ -299,6 +297,13 @@
   font-weight: bold;
   margin-bottom: 11px;
   margin-top: 21px;
+}
+
+.content__gallery-header {
+  color: var(--main-color-dark-theme);
+  background-color: var(--accent-color-dark-theme);
+  font-weight: bold;
+  margin-bottom: 11px;
 }
 
 .content__article-text {
@@ -336,7 +341,6 @@
   margin-top: 60px;
   margin-right: 20px;
   margin-left: 20px;
-  margin-bottom: 60px;
 }
 
 .content__section_constant-columns {
@@ -401,7 +405,7 @@
 .gallery__picture-image {
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center center;
     min-height: 100%;
 }
 
@@ -416,9 +420,9 @@
   }
 
   .gallery__list {
-    grid-template-columns: repeat(2, 1fr) 236px ;
+    grid-template-columns: repeat(2, 1fr) 242px ;
     grid-template-rows: repeat(3, auto);
-    gap: 17px;
+    gap: 15px;
     margin-top: 20px;
   }
 
@@ -451,7 +455,7 @@
 /* Медиазапросы_1024px для галлереи*/
 @media screen and (min-width: 1024px) {
   .gallery__list {
-    grid-template-columns: repeat(2, 1fr) 315px ;
+    grid-template-columns: repeat(2, 1fr) 320px;
   }
 }
 
@@ -474,7 +478,7 @@
   line-height: 82.5%;
   color: var(--color-header-title);
   text-shadow: 0 4px 2px #FF0070;
-  padding-left: 20px;
+  padding-left: 18px;
 }
 
 /* Медиазапросы_768px для галлереи*/
