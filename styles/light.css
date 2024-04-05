@@ -4,8 +4,7 @@
   переключая тему
 */
 
-:root .page.theme_light {
-  /* Дублируем переменные светлой темы */
+.page.theme_light {
   --accent-color-dark-theme: #FF8DCB;
   --main-color-dark-theme: #353430;
   --background-color: #FFF1F7;
@@ -18,12 +17,6 @@
   --REC-hidden: hidden;
   --decor-href: #353430;
   --color-content-text: #353430;
-  --title-shadow: #ff0070;
-  --main-font-family: 'IBM Plex mono', sans-serif;
-}
-
-  .page.theme_light {
-  inline-size: 375px;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center top;
@@ -33,26 +26,6 @@
   font-family: var(--main-font-family);
   color: var(--color-content-text);
   margin: 0 auto;
-}
-
-.page.theme_light .header__rec_pseudo {
-  visibility: var(--REC-hidden);
-}
-
-/* Медиазапросы_768px для heder*/
-@media screen and (min-width: 768px) {
-
-  .page.theme_light {
-    inline-size: 768px;
- }
-}
-
-/* Медиазапросы_1024px для heder*/
-@media screen and (min-width: 1024px) {
-  
-.page.theme_light {
-  inline-size: 1024px;
-}
 }
 
 @media (prefers-color-scheme: light) {

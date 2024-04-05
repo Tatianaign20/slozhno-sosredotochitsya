@@ -2,7 +2,7 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
-  inline-size: 375px;
+  /* inline-size: 375px; */
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: center top;
@@ -12,6 +12,10 @@
   font-family: var(--main-font-family);
   color: var(--color-content-text);
   margin: 0 auto;
+}
+
+.page-size {
+  inline-size: 375px;
 }
 
 /* Header */
@@ -176,7 +180,7 @@
 /* Медиазапросы_768px для heder*/
 @media screen and (min-width: 768px) {
 
-  .page {
+  .page-size {
     inline-size: 768px;
  }
 
@@ -225,7 +229,7 @@
 /* Медиазапросы_1024px для heder*/
 @media screen and (min-width: 1024px) {
   
-.page {
+.page-size {
   inline-size: 1024px;
 }
 
@@ -268,7 +272,7 @@
   margin-left: 10px;
   margin-right: 10px;
   margin-top: 40px;
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   font-size: 1.125rem;
 }
 
@@ -335,7 +339,7 @@
   margin-bottom: 60px;
 }
 
-.content__section_display-two-column {
+.content__section_constant-columns {
   display: grid;
   grid-template-columns: min(35%, 236px) 1fr;
   gap: 20px;
@@ -349,7 +353,7 @@
   margin-bottom: 21px;
 }
 
-.content__section_display-one-or-three-column {
+.content__section_variable-columns {
   display: grid;
   grid-template-columns: 236px repeat(2, 1fr);
   grid-template-rows: repeat(2, min-content);
@@ -360,23 +364,23 @@
   grid-column: 1;
 }
 
-.content__article-display-one-or-three-column {
+.content__article-variable-columns {
   grid-column: 1 / 4;
 }
 }
 
 /* Медиазапросы_1024px для основного контента*/
 @media screen and (min-width: 1024px) {
-  .content__section_display-two-column {
+  .content__section_constant-columns {
     grid-template-columns: min(35%, 314px) 1fr;
   }
 
-  .content__section_display-one-or-three-column {
+  .content__section_variable-columns {
     grid-template-columns: 314px repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
     gap: 20px;
   }
-  .content__article-display-one-or-three-column {
+  .content__article-variable-columns {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
@@ -385,8 +389,6 @@
 
 /* Галерея */
 .gallery {
-  margin-left: 10px;
-  margin-right: 10px;
   margin-bottom: 36px;
   font-size: 1.125rem;
 }
@@ -406,8 +408,6 @@
 /* Медиазапросы_768px для галлереи*/
 @media screen and (min-width: 768px) {
   .gallery {
-    margin-left: 20px;
-    margin-right: 20px;
     margin-bottom: 52px;
   }
 
