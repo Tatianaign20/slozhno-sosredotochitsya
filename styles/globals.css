@@ -40,7 +40,3 @@ a {
   font-size: inherit;
   line-height: inherit;
 }
-
-:focus-visible {
-  outline: -webkit-focus-ring-color none;
-}

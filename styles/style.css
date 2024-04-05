@@ -7,8 +7,9 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-attachment: fixed;
+  background-size: cover;
   background-color: var(--background-color);
-  font-family: 'IBM Plex mono', sans-serif;
+  font-family: var(--main-font-family);
   color: var(--color-content-text);
   margin: 0 auto;
 }
@@ -18,7 +19,7 @@
   display: grid;
   grid-template-rows: min-content min-content min-content;
   min-height: 668px;
-  height: 100vh;
+  max-height: 100vh;
   width: 100%;
   position: relative;
 } 
@@ -48,8 +49,8 @@
   background-color: transparent;
   border-bottom: 0.0625rem solid var(--decor-header);
   border-left: 0.0625rem solid var(--decor-header);
-  left: 3%;
-  bottom: 1.2%;
+  left: 10px;
+  bottom: 10px;
 }
 
 /* Псевдоэлементы REC и точка */
@@ -57,10 +58,10 @@
   display: flex;
   align-items: center;
   justify-content: end;
-  gap: 0.8vw;
+  gap: 10px;
   position: absolute;
-  top: 1.5%;
-  right: 5%;
+  top: 10px;
+  right: 20px;
 }
 
 .header__rec_pseudo::before {
@@ -112,7 +113,6 @@
 
 .header__theme-menu-button {
   display: block;
-  width: 70px;
   background-color: transparent;
   border: none;
   color: var(--decor-button-header);
@@ -121,23 +121,27 @@
   font-style: normal;
   font-weight: normal;
   padding-bottom: 2px;
+  padding-left: 13px;
+  padding-right: 13px;
 }
 
 .header__theme-menu-button_active {
-  border: 1px solid var(--decor-button-header);
+  outline: 1px solid var(--decor-button-header);
   pointer-events: none;
 }
 
 /* Состояния кнопок при активности */
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-hover);
+  outline: 1px solid var(--button-hover);
+  cursor: pointer;
 }
 
 .header__theme-menu-button:focus {
-  border: none;
+  outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
+  outline: -webkit-focus-ring-color none;
   border-bottom: 1px solid var(--decor-button-header);
 }
 
@@ -148,15 +152,15 @@
   text-decoration: none;
   font-style: normal;
   font-weight: bold;
-  line-height: 6rem;
+  line-height: 82.5%;
   color: var(--color-header-title);
   text-shadow: 4px 4px 0 var(--title-shadow);
   padding-left: 10px;
-  margin-top: 55px;
+  margin-top: 58px;
 }
 
 /* Мысль в header */
-.header__idea {
+.header__description {
   display: flex;
   justify-self: end;
   color: var(--main-color-dark-theme);
@@ -211,7 +215,7 @@
   padding-left: 0;
 }
 
-.header__idea {
+.header__description {
   max-width: min(50%, 364px);
   margin-right: 20px;
   margin-top: 162px;
@@ -249,7 +253,7 @@
   font-weight: 700;
 }
 
-.header__idea {
+.header__description {
   max-width: min(50%, 491px);
   margin-top: 130px;
 }
@@ -273,17 +277,21 @@
   flex-direction: column;
 }
 
+.content__all-header {
+  font-size: inherit;
+  line-height: 130%;
+  font-style: normal;
+}
+
 .content__main-header {
   display: block;
   color: var(--content-main-header);
-  font-size: inherit;
   font-weight: bold;
 }
 
 .content__article-header {
   color: var(--main-color-dark-theme);
   background-color: var(--accent-color-dark-theme);
-  font-size: inherit;
   font-weight: bold;
   margin-bottom: 11px;
   margin-top: 21px;
@@ -307,11 +315,12 @@
 
 /* Состояния ссылок */
 .text__shadow:hover {
-  text-decoration: underline;
+  border-bottom: 1px solid var(--decor-href);
 }
 
 .text__shadow:focus-visible {
-  border: 1px solid var(--decor-href);
+  outline: -webkit-focus-ring-color none;
+  outline: 1px solid var(--decor-href);
 }
 
 /* Медиазапросы_768px для основного контента*/
@@ -325,7 +334,7 @@
   margin-bottom: 60px;
 }
 
-.content__section_2column {
+.content__section_display-two-column {
   display: grid;
   grid-template-columns: min(35%, 236px) 1fr;
   gap: 20px;
@@ -339,7 +348,7 @@
   margin-bottom: 21px;
 }
 
-.content__section_1column {
+.content__section_display-one-or-three-column {
   display: grid;
   grid-template-columns: 236px repeat(2, 1fr);
   grid-template-rows: repeat(2, min-content);
@@ -350,23 +359,23 @@
   grid-column: 1;
 }
 
-.content__article-column-1 {
+.content__article-display-one-or-three-column {
   grid-column: 1 / 4;
 }
 }
 
 /* Медиазапросы_1024px для основного контента*/
 @media screen and (min-width: 1024px) {
-  .content__section_2column {
+  .content__section_display-two-column {
     grid-template-columns: min(35%, 314px) 1fr;
   }
 
-  .content__section_1column {
+  .content__section_display-one-or-three-column {
     grid-template-columns: 314px repeat(2, 1fr);
     grid-template-rows: repeat(2, min-content);
     gap: 20px;
   }
-  .content__article-column-1 {
+  .content__article-display-one-or-three-column {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 15px;
@@ -406,7 +415,6 @@
   }
 
   .gallery__list {
-    display: grid;
     grid-template-columns: repeat(2, 1fr) 236px ;
     grid-template-rows: repeat(3, auto);
     gap: 17px;
@@ -450,7 +458,7 @@
 .footer {
   display: flex;
   min-height: 668px;
-  height: 100vh;
+  max-height: 100vh;
   width: 100%;
   position: relative;
 }
@@ -462,11 +470,10 @@
   text-decoration: none;
   font-style: normal;
   font-weight: bold;
-  line-height: 6rem;
+  line-height: 82.5%;
   color: var(--color-header-title);
   text-shadow: 0 4px 2px #FF0070;
   padding-left: 20px;
-  letter-spacing: -0.18rem;
 }
 
 /* Медиазапросы_768px для галлереи*/
@@ -479,7 +486,6 @@
   .footer__title {
     padding-left: 0;
     padding-bottom: 5px;
-    letter-spacing: -0.1rem;
   }
 }
 
